@@ -1,0 +1,56 @@
+/* Brand stylesheet — modern, accessible, responsive base */
+:root{
+  --brand-1:#0b5d8c;
+  --accent:#f5a623;
+  --bg:#ffffff;
+  --muted:#6b7280;
+}
+*{box-sizing:border-box}
+body{font-family:system-ui,-apple-system,Segoe UI,Roboto,'Helvetica Neue',Arial;line-height:1.5;margin:0;color:#111;background:var(--bg)}
+.container{max-width:1100px;margin:0 auto;padding:1rem}
+.site-header{background:linear-gradient(90deg,#006666,#0e7fb3);color:white}
+.site-header .container{display:flex;align-items:center;justify-content:space-between;padding:1rem}
+.header-inner{gap:1rem;display:flex;align-items:center;width:100%}
+.logo{font-weight:700;color:white;text-decoration:none}
+.logo{display:flex;align-items:center;gap:0.6rem}
+.logo-img{width:56px;height:56px;object-fit:contain;border-radius:6px}
+.logo-text{font-weight:700;color:white}
+/* Flashy serif for site title */
+.site-header .logo .logo-text, .logo-text{
+  font-family: 'Playfair Display', Georgia, 'Times New Roman', serif !important;
+  font-weight: 900 !important;
+  font-size: 1.5rem !important;
+  letter-spacing: 1px !important;
+  text-shadow: 0 3px 0 rgba(0,0,0,0.18) !important;
+  color: #fff !important;
+}
+@media (min-width: 768px){
+  .site-header .logo .logo-text, .logo-text{font-size:2.25rem !important}
+}
+
+/* Carousel image sizing */
+.carousel-img{height:360px;object-fit:cover}
+@media (max-width:800px){.carousel-img{height:220px}}
+
+/* Quick links styling */
+.quick-links{margin-top:1.25rem}
+.quick-btn{padding:1.25rem; font-size:1.05rem; text-align:left}
+.quick-btn:focus{box-shadow:0 0 0 .25rem rgba(0,102,102,0.25)}
+.quick-btn .bi{font-size:1.35rem; vertical-align:middle; margin-right:.75rem}
+.nav{display:flex;gap:1rem;align-items:center}
+.nav a{color:rgba(255,255,255,0.95);text-decoration:none;padding:.4rem .6rem;border-radius:6px}
+.nav a:focus,.nav a:hover{background:rgba(255,255,255,0.08);outline:2px solid rgba(255,255,255,0.12)}
+.nav-toggle{display:none;background:transparent;border:0;color:white;font-size:1.4rem;padding:.25rem}
+.hero{padding:4rem 1rem;text-align:center}
+.hero h1{margin:0 0 .5rem;font-size:clamp(1.5rem,4vw,2.5rem)}
+.btn{display:inline-block;margin-top:1rem;padding:.75rem 1.25rem;background:var(--accent);color:#111;border-radius:6px;text-decoration:none}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1rem;margin:2rem 0}
+.card{background:#fff;border:1px solid #e6e6e6;padding:1rem;border-radius:8px}
+.site-footer{background:#006666;color:white;padding:1rem;text-align:center}
+@media (max-width:600px){.site-header .container{flex-direction:column;align-items:flex-start}.nav{margin-top:.5rem}}
+.nav[hidden]{display:none}
+@media (max-width:800px){
+  .nav{display:none}
+  .nav-toggle{display:inline-flex;align-items:center}
+  .nav.expanded{display:flex;flex-direction:column;width:100%;margin-top:.5rem;background:linear-gradient(180deg,rgba(255,255,255,0.02),rgba(255,255,255,0.01));padding:.5rem;border-radius:8px}
+}

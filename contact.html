@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Contact — Macon County</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" integrity="sha384-9ndCyUa6Y5Y2b1g6k6i3Qe3QZqj1QZ6bX9p1z9+Y5b6G5v5Q5y5X5Z5P5J5U5c5" crossorigin="anonymous">
+  <link rel="stylesheet" href="styles/brand.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header class="site-header" role="banner">
+    <div class="container header-inner">
+      <a class="logo" href="/">
+  <img src="assets/mock-logo.png" alt="Macon County logo" class="logo-img">
+        <span class="logo-text">Macon County</span>
+      </a>
+      <button id="nav-toggle" class="nav-toggle" aria-expanded="false" aria-controls="main-nav" aria-label="Toggle navigation">☰</button>
+      <nav id="main-nav" class="nav" role="navigation">
+        <a href="/">Home</a>
+        <a href="services.html">Services</a>
+        <a href="/Maps/default.htm">Maps</a>
+        <a href="contact.html" aria-current="page">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container my-4">
+    <div class="row">
+      <aside class="col-12 col-md-4 mb-3">
+        <div class="p-3 rounded-3 bg-light">
+          <h2>CONTACT</h2>
+          <address>
+            <strong>Macon County NC Government</strong><br>
+            5 West Main Street<br>
+            Franklin, NC 28734<br>
+            Phone: <a href="tel:+18283492000">(828) 349-2000</a>
+          </address>
+        </div>
+      </aside>
+      <section class="col-12 col-md-8">
+        <h1>Contact Macon County</h1>
+        <p>Use the contact details on the left to reach county offices. For department-specific inquiries, visit their pages in Services.</p>
+        <div class="card mt-3">
+          <div class="card-body">
+            <h2>Send us a message</h2>
+            <form id="contact-form" data-endpoint="">
+              <div class="mb-3">
+                <label for="name" class="form-label">Name</label>
+                <input type="text" class="form-control" id="name" name="name" required>
+              </div>
+              <div class="mb-3">
+                <label for="email" class="form-label">Email</label>
+                <input type="email" class="form-control" id="email" name="email" required>
+              </div>
+              <div class="mb-3">
+                <label for="subject" class="form-label">Subject</label>
+                <input type="text" class="form-control" id="subject" name="subject">
+              </div>
+              <div class="mb-3">
+                <label for="message" class="form-label">Message</label>
+                <textarea class="form-control" id="message" name="message" rows="5" required></textarea>
+              </div>
+              <div class="mb-3">
+                <button type="submit" class="btn btn-primary" id="contact-submit">Send message</button>
+                <span id="contact-status" class="ms-3" aria-live="polite"></span>
+              </div>
+            </form>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">© Macon County GIS</div>
+  </footer>
+
+  <script src="scripts/main.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoA6VZ7a2e1Y1o1r2b3c4d5e6f7g8h9i0j" crossorigin="anonymous"></script>
+</body>
+</html>
